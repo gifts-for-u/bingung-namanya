@@ -125,7 +125,7 @@ html {
   text-decoration: none;
 }
 
-.next-btn::hover{
+.next-btn:hover{
   background-color: #f0bde5;
   color: #551a57;
 }
