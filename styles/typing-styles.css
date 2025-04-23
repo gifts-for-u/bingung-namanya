@@ -1,0 +1,84 @@
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #fce4ec;
+}
+
+.typing-container {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  word-wrap: break-word;
+  max-width: 80%; /* Membatasi lebar kontainer agar tidak terlalu lebar pada layar besar */
+  white-space: normal;
+  text-align: justify;
+  color: #d81b60;
+  padding: 0 16px; /* Menambahkan padding agar teks tidak mepet pada layar kecil */
+}
+
+/* .typing-text {
+  font-weight: bold;
+  letter-spacing: 1px;
+  position: relative; 
+}
+
+.typing-text::after {
+  content: "|"; 
+  font-weight: bold;
+  animation: blink 0.7s infinite; 
+  position: absolute;
+} */
+
+.typing-text {
+  position: relative;
+  font-weight: bold;
+}
+
+.typing-text::after {
+  content: "|"; /* Gunakan pseudo-element untuk membuat cursor */
+  font-weight: bold;
+  animation: blink 0.7s infinite;
+  position: absolute;
+}
+/* .cursor {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+} */
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+/* Media Query untuk Responsivitas */
+@media screen and (max-width: 768px) {
+  .typing-container {
+    font-size: 1.5rem; /* Ukuran font lebih kecil untuk layar menengah */
+  }
+
+  .cursor {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .typing-container {
+    font-size: 1.2rem; /* Ukuran font lebih kecil untuk layar kecil */
+  }
+
+  .cursor {
+    font-size: 1.2rem;
+  }
+}
