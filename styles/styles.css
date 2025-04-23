@@ -79,7 +79,6 @@ html {
   color: #fff; /* Warna teks putih agar kontras */
   border: none;
   font-family: "Figtree", sans-serif; /* Menggunakan font Figtree saat hover */
-
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 16px;
@@ -124,6 +123,11 @@ html {
   border-radius: 50px;
   font-style: none;
   text-decoration: none;
+}
+
+.next-btn::hover{
+  background-color: #f0bde5;
+  color: #551a57;
 }
 
 #sec-2 {
